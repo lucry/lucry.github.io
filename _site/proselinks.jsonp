@@ -2,12 +2,12 @@ callback([
 
   {
     "text": "下载jekyll静态博客模板并上传至github",
-    "href": "http://localhost:4000/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/"
+    "href": "/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/"
   } ,
 
   {
     "text": "如何在深度系统上配置JDK",
-    "href": "http://localhost:4000/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/"
+    "href": "/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/"
   } 
 
 ])
