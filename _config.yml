@@ -14,8 +14,8 @@ logo: img/logos/logo.png
 
 # Tertiary Parameters
 github_username:  lucry
-project_repository: blog
-disqus_shortname: blog
+project_repository: lucry.github.io
+disqus_shortname: lucry.github.io
 g-analytics: UA-75881392-1
 altmetric: true
 
