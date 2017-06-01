@@ -2,7 +2,7 @@
 
 - name: 盛丽
   role: 儿子
-  img: img/members/shellypower.jpg
+  img: "img/members/shellypower.jpg"
   github: shellypower
   gplus:
   bio: 盛丽是一个西南交大的“女大学生”，正在跟我一起学习前端。灵魂的小伙伴，前进的同行者。性格慢热，但是内心就是个逗比。自带学霸属性，喜欢王菲跟霍建华。
