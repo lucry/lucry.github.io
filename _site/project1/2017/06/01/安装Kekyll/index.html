@@ -164,6 +164,32 @@
 
 	
 	
+	
+	<div class="float-left">
+	<div class="recentpost" style="padding: 10px">
+	
+	<h4> Recently by the same author: </h4> 
+	
+	<hr class="style-one">
+	
+	<a href="/project1/2017/06/01/%E8%88%9E%E5%A8%98/"><h2 class="post-title"> 舞娘（flexbox）</h2></a>
+	
+	
+	
+	<p class="post-meta" style="margin-top: 5px;margin-bottom:5px; font-size: 0.8em">Posted by 葱葱 on June 1, 2017</p>
+	
+	<div class="notepad-index-post-tags" style="">
+	<a href="/search/index.html#CSS" title="Other posts from the Css tag">Css</a>&nbsp;<a href="/search/index.html#笔记" title="Other posts from the 笔记 tag">笔记</a>
+	</div> 
+	
+			
+	
+	</div>
+	</div>
+	
+	
+	
+	
 		
 	
 
@@ -172,17 +198,9 @@
 
 
 	
-	 
-	
-	
-	
-
-	
 	
 	
 
-	
-	 
 	
 	
 	
@@ -191,10 +209,64 @@
 	 
 	
 	
+			
+		
+			
+		
+	
+	
+			
+		
+			
+		
+	
+	
+			
+		
+			
+		
+	
+	
+			
+		
+			
+		
+	
+	
 	
 
 	
 	 
+	
+	
+			
+		
+			
+		
+	
+	
+			
+		
+			
+		
+	
+	
+	
+
+	
+	 
+	
+	
+			
+		
+			
+		
+	
+	
+			
+		
+			
+		
 	
 	
 	
@@ -316,36 +388,41 @@ img:active{
   <li>官网链接：http://www.ruby-lang.org/en/documentation/installation/</li>
   <li>使用错误：<code class="highlighter-rouge">ERROR:  While executing gem ... (Gem::FilePermissionError)</code>
   <code class="highlighter-rouge">You don't have write permissions for the /usr/local/bin directory.
-</code>
-解决方法：在操作语句前加<code class="highlighter-rouge">sudo</code>
-    <h3 id="2通过rbenv安装可选择版本">2.通过rbenv安装（<strong>可选择版本</strong>）</h3>
-    <p>```python
-cd $HOME
-sudo apt-get update
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev</p>
-  </li>
+</code></li>
+  <li>解决方法：在操作语句前加<code class="highlighter-rouge">sudo</code></li>
 </ul>
 
-<p>git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo ‘export PATH=”$HOME/.rbenv/bin:$PATH”’ » ~/.bashrc
-echo ‘eval “$(rbenv init -)”’ » ~/.bashrc
-exec $SHELL</p>
+<h3 id="2通过rbenv安装可选择版本">2.通过rbenv安装（<strong>可选择版本</strong>）</h3>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">cd</span> <span class="err">$</span><span class="n">HOME</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">core</span> <span class="n">curl</span> <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">libreadline</span><span class="o">-</span><span class="n">dev</span> <span class="n">libyaml</span><span class="o">-</span><span class="n">dev</span> <span class="n">libsqlite3</span><span class="o">-</span><span class="n">dev</span> <span class="n">sqlite3</span> <span class="n">libxml2</span><span class="o">-</span><span class="n">dev</span> <span class="n">libxslt1</span><span class="o">-</span><span class="n">dev</span> <span class="n">libcurl4</span><span class="o">-</span><span class="n">openssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">python</span><span class="o">-</span><span class="n">software</span><span class="o">-</span><span class="n">properties</span> <span class="n">libffi</span><span class="o">-</span><span class="n">dev</span>
 
-<p>git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo ‘export PATH=”$HOME/.rbenv/plugins/ruby-build/bin:$PATH”’ » ~/.bashrc
-exec $SHELL</p>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rbenv</span><span class="o">/</span><span class="n">rbenv</span><span class="o">.</span><span class="n">git</span> <span class="o">~/.</span><span class="n">rbenv</span>
+<span class="n">echo</span> <span class="s">'export PATH="$HOME/.rbenv/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="n">echo</span> <span class="s">'eval "$(rbenv init -)"'</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="k">exec</span> <span class="err">$</span><span class="n">SHELL</span>
 
-<p>rbenv install 2.3.1
-rbenv global 2.3.1
-ruby -v</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>### 3.安装结果：`gem env`
-  - RUBYGEMS VERSION: 2.5.1
-  - RUBY VERSION: 2.3.1 (2016-04-26 patchlevel 112) [x86_64-linux-gnu]
-## 安装jekyll
-```python
-sudo gem install jekyll
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rbenv</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="n">build</span><span class="o">.</span><span class="n">git</span> <span class="o">~/.</span><span class="n">rbenv</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="n">build</span>
+<span class="n">echo</span> <span class="s">'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
+<span class="k">exec</span> <span class="err">$</span><span class="n">SHELL</span>
+
+<span class="n">rbenv</span> <span class="n">install</span> <span class="mf">2.3</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">rbenv</span> <span class="k">global</span> <span class="mf">2.3</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">ruby</span> <span class="o">-</span><span class="n">v</span>
 </code></pre>
 </div>
+
+<h3 id="3安装结果gem-env">3.安装结果：<code class="highlighter-rouge">gem env</code></h3>
+<ul>
+  <li>RUBYGEMS VERSION: 2.5.1</li>
+  <li>RUBY VERSION: 2.3.1 (2016-04-26 patchlevel 112) [x86_64-linux-gnu]</li>
+</ul>
+
+<h2 id="安装jekyll">安装jekyll</h2>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span>
+</code></pre>
+</div>
+
 <h2 id="jekyll官网">jekyll官网</h2>
 <p>http://jekyll.com.cn/</p>
 
@@ -355,12 +432,12 @@ sudo gem install jekyll
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/06/01/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85curl/" data-toggle="tooltip" data-placement="top" title="下载安装curl">&larr; Previous Post</a>
+                        <a href="/project1/2017/06/01/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85curl/" data-toggle="tooltip" data-placement="top" title="如何安装node-gyp">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/06/01/%E8%88%9E%E5%A8%98/" data-toggle="tooltip" data-placement="top" title="舞娘">Next Post &rarr;</a>
+                        <a href="/project1/2017/06/01/%E8%88%9E%E5%A8%98/" data-toggle="tooltip" data-placement="top" title="舞娘（flexbox）">Next Post &rarr;</a>
                     </li>
                     
                 </ul>

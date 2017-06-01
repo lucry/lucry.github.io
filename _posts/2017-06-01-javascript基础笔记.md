@@ -1,9 +1,8 @@
-﻿---
+---
 layout:     post
 title:      javascript基础注意点
 author:     葱葱
 tags: 		javascri 笔记
-subtitle:   To learn how to use a jekyll blog model and push it on the github.
 category:  project1
 
 ---
@@ -11,12 +10,14 @@ category:  project1
 ## 真假值判定(boolean)
 * true:非零值，空对象(empty object)，空数组(empty array)
 * false:数字零，undefined(没有值)，null(没有对象)，NaN，''
+
 ## 查看元素类型
 * typeof:直接显示变量的数据类型
 * instanceof:判断变量是否为通过Constr构造器构造的对象
+
 ## 运算符/操作符
-* 常规（宽松）的相等：== ，！= 
-* 严格的相等：=== ， ！== 
+* 常规（宽松）的相等：== ，！=
+* 严格的相等：=== ， ！==
 * 严格是指不但值相等，数据类型也相同；宽松意义的相等只需值相等即可。
 * javscript中没有比较对象的方法(用new构造的对象(类)之间无法进行比较)
 * 异或的异或为原始数据（该性质可用于数据的加密解密）
@@ -25,7 +26,7 @@ category:  project1
 * “,”运算符的作用为从左到右执行表达式，最后返回最右边的表达式的结果
 * call 运算符：改变函数当前this指针的指向，可更改当前执行上下文
 
-```python
+  ```python
 //例：showStudentInfo为一种函数方法
 
       var stu1=new Student("Tom",20);
@@ -33,12 +34,14 @@ category:  project1
       showStudentInfo.call(stu1); //对stu1调用方法
       showStudentInfo.call(stu2); //对stu2调用方法
       }
-```
+  ```
+
 ## 数字
 * javascript 中的数字全为float型，可通过math.ceil(向上) math.floor(向下) 对数字进行取整
 * NaN表示not a number
 * 强制类型转换为int用parseInt，强制转换为float型用parseFloat
-##函数
+
+## 函数
 * 格式：
 ```python
     function 函数名（参数）{
@@ -51,7 +54,8 @@ category:  project1
 * 参数太多会忽略额外的参数（arguments除外），丢失的参数会得到undefined
 * 函数的返回值类型包括值类型，引用类型和函数类型。值类型返回的使数据的副本，用于返回非对象数据；引用类型返回的是数据的地址，通常返回复合类型数据；返回函数返回函数指针（外部函数不能调用私有函数）。
 * 公有函数指定义在全局作用域的函数，可被所有代码调用的函数；私有函数是指处于局部作用域（嵌套函数的子级函数），外部函数不可调用。
-##变量名及书写
+
+## 变量名及书写
 * javascript区分大小写，大小写不同的变量为不同变量执行不同操作，变量命名以字母和下划线开头
 * 多余的空格会被忽略，同一语句可以分多行书写，而字符串若分行则需用+连接
 * 用new创建的对象要删除时必须对引用对象的变量赋值为null
@@ -61,12 +65,13 @@ category:  project1
       var year=time.getYear(); //新建一个变量
       document.write(year);
 ```
+
 ## 字符串
 * 字符串的字符索引从0开始
 * 一字符串类型变量与一数字类型变量相加时，数字变量会先被强制转换为字符串类型，然后执行字符串连接操作
 * javascript可直接写入HTML代码，输出时该HTML代码会被执行
 
-```python
+  ```python
 //例：对数组进行由小到大排列
 
   var oMyArray=new Array(13,55,37,33,45,9,60,21,10);
@@ -81,7 +86,7 @@ category:  project1
           }
         }
       }
-```
+    ```
 
 ## 数组
 * 对数组进行排序时，操作对象为数组本身，执行交换操作会实时对数组本身进行操作从而更改原数组数据顺序
@@ -108,20 +113,20 @@ category:  project1
 * splice可以删除数组从某一位置起的一个或多个元素并可将其替换为其它元素,函数返回被删除的元素。
 ```python
     /*删除数组Ary从下标为1的元素起的3个元素，并在删除位置上插入"red","yellow","green","blue" */    
-      Ary3=Ary.splice(1,3,"red","yellow","green","blue"); 
+      Ary3=Ary.splice(1,3,"red","yellow","green","blue");
       document.write(Ary3); //被删除的元素
       document.write("<br>");
       document.write(Ary); //被替换之后的原数组
-      document.write("<br>");
+    document.write("<br>");
 ```
-> ***数组的其它操作***
+  > ***数组的其它操作***
+  > * 颠倒数组顺序：reverse();
+  > * 对数组进行排序：sort(); //默认为ASCLL码升序
+  > * 将对象转换为本地字符串：toLocaleString();
 
-> * 颠倒数组顺序：reverse();
-> * 对数组进行排序：sort(); //默认为ASCLL码升序
-> * 将对象转换为本地字符串：toLocaleString();
 ## 异常处理
 * try-catch语句
-```python
+  ```python
 try{
     tryStatements; //必选项，可能发生错误的语句
 }
@@ -129,9 +134,9 @@ catch(exception){ //exception用于引用错误发生时的对象
     catchStatements; //可选项，错误处理语句
 }
 
-```
+  ```
 * try-catch-finally语句
-```python
+  ```python
 try{
     tryStatements; //必选项，可能发生错误的语句
 }
@@ -141,9 +146,9 @@ catch(exception){ //exception用于引用错误发生时的对象
 finally{
     finallyStatements; //可选项，在其他过程执行结束后无条件执行的语句
 }
-```
+  ```
 * throw语句：多个异常处理结构嵌套时，处于里层的try-catch语句可将异常抛出，父级try-catch语句可以接收子级抛出的异常
-```python
+  ```python
       try {
         var total = 100;
         var parts = 0;
@@ -154,10 +159,4 @@ finally{
       } catch (e) {
         alert(e); //输出异常信息
       }
-```
-
-
-
-
-
-
+  ```
