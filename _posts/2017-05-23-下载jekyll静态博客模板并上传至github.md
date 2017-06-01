@@ -43,4 +43,4 @@ git commit -m "first post"
 　　$ git remote add origin https://github.com/username/jekyll_demo.git
 　　$ git push origin gh-pages
 ```
-### 11.访问http://username.github.com/jekyll_demo/即可。（将username替换为自己的github用户名）。
+### 11.访问http://username.github.io/jekyll_demo/即可。（将username替换为自己的github用户名）。

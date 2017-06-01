@@ -1,0 +1,217 @@
+<p>﻿—
+layout:     post
+title:      javascript对象篇
+author:     葱葱
+tags: 		javascript 笔记
+subtitle:   To learn how to use a jekyll blog model and push it on the github.
+category:  project1</p>
+
+<hr />
+<h2 id="面向过程与面向对象">面向过程与面向对象</h2>
+<ul>
+  <li>面向过程是将能完成特定任务的程序段独立起来做成函数，整个系统通过函数相互调用处理数据，系统以数据流为中心。</li>
+  <li>面向对象的语言至少提供以下功能：封装、聚合、继承、多态。对象应具备属性和方法。
+##javascript的对象
+    <blockquote>
+      <ul>
+        <li>当要废除一个对象时，可将其指向null</li>
+        <li>javascript是动态语言，对象类型在运行时才能确定，不存在早期绑定。</li>
+        <li><strong>javascript对象模型</strong>：语言核心、基本内置语句（String、Date、Math等）、浏览器对象（window、Navigator、Location等）、文档对象（Document、Form、Image等）</li>
+        <li><strong>浏览器对象模型</strong>(window)：document、frames、history、location、navigator
+##事件驱动与事件处理</li>
+        <li>常用输入事件：
+1、onload、onunload（卸载某网页）、
+2、onMousemove、onMouseOut、onMouseOver、onMousedown、onMouseup、
+3、onClick、oncontextmenu（鼠标右键单击事件）、ondblclick、
+4、onkeydown、onkeyup、onkeypress、
+5、onfocus、onBlur（对象失去焦点）、onchange、onselect、
+6、onsubmit（提交表单）、onreset（重置）</li>
+        <li>事件后可调用代码
+          <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="n">name</span><span class="o">=</span><span class="s">"Submit"</span> <span class="n">value</span><span class="o">=</span><span class="s">"查看密码和姓名"</span> <span class="n">onclick</span><span class="o">=</span><span class="s">"javascript:alert('姓名：'+form1.textfield.value+'</span><span class="se">\n</span><span class="s"> 密码：'+form1.password.value);"</span><span class="o">/&gt;</span>
+</code></pre>
+          </div>
+        </li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<blockquote>
+  <ul>
+    <li>设置对象事件的方法
+      <div class="language-python highlighter-rouge"><pre class="highlight"><code>    <span class="n">function</span> <span class="n">HandleAllLinks</span><span class="p">(){</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">document</span><span class="o">.</span><span class="n">links</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">document</span><span class="o">.</span><span class="n">links</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">onclick</span> <span class="o">=</span> <span class="n">HandleAllLink</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">function</span> <span class="n">HandleAllLink</span><span class="p">(){</span>
+      <span class="n">alert</span><span class="p">(</span><span class="s">"即将离开此页！"</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre>
+      </div>
+    </li>
+    <li>显式调用事件处理程序
+```python
+  <script type="text/javascript">
+    function clickHandler(){
+      alert("即将提交表单！");
+      return turn;
+    }
+    myform.mybutton.onclick();
+  </script></li>
+  </ul>
+</blockquote>
+<p>&lt;/head&gt;</p>
+<body>
+    <form name="myform" action="" method="post">
+      <input type="submit" name="mybutton" value="提交" onclick="return clickHandler()" />
+    </form>
+  </body>
+<blockquote>
+  <div class="highlighter-rouge"><pre class="highlight"><code>* 事件处理程序的返回值为false时会阻止浏览器进行下一步操作。
+* **其它常用事件**
+   弹出警告框：alert()
+   弹出询问框：confirm()
+   弹出对话框：prompt()
+   打开新窗口：open("url","name","replace")
+   关闭窗口：close();
+   改变大小：resizeBy(x,y);resizeTo(x,y)
+   自动滚动文档：window.scrollBy(左右,上下);
+   设置定时器（周期性执行代码）：setInterval("函数",时间);
+   停止周期性执行代码：clearInterval(timer);
+   延迟代码执行：window.setTimeout("code",time);
+   取消延迟执行：clearTimeout(延时器);
+* open 方法可打开非HTML文件，只需在第一个参数加上文件类型即可。
+## 屏幕对象
+*      屏幕实际高度：screen.availHeight
+        屏幕实际宽度：screen.availWidth
+        屏幕色盘深度：screen.colorDepth
+        屏幕区域高度：screen.height
+        屏幕区域宽度：screen.width
+        屏幕分辨率：screen.width*screen.height
+        网页可见区域宽：document.body.clientWidth
+        网页可见区域高：document.body.clientHeight
+        网页可见区域宽（包括边线和滚动条）：document.body.offsetWidth
+        网页可见区域高（包括边线的宽）：document.body.offsetHeight
+        网页正文全文宽：document.body.scrollWidth
+        网页正文全文高：document.body.scrollHeight
+        网页被卷去的高：document.body.scrollTop
+        网页被卷去的左：document.body.scrollLeft
+        网页正文部分上：window.screenTop
+        网页正文部分左：window.screenLeft
+## 浏览器对象（navigator）
+* 浏览器代码：navigator.appCodeName
+   浏览器名称：navigator.appName
+   浏览器版本：navigator.appVersion
+   浏览器语言：navigator.language
+   浏览器编译平台：navigator.platform
+   浏览器用户表头：navigator.userAgent1
+* MimeType对象以数组形式保存浏览器所支持MIME类型信息，Plugin主要管理当前浏览器已安装的插件或外挂程序信息。
+```python
+     //例：列表输出MIME信息
+      var count = navigator.mimeTypes.length;
+      with(document){
+        write("当前浏览器支持"+count+"种MIME类型：");
+        write("&lt;TABLE BORDER&gt;")
+        write("&lt;CAPTION&gt;MIME type 清单&lt;/CAPTION&gt;")
+        write("&lt;tr&gt;&lt;th&gt;&lt;th&gt;名称&lt;th&gt;描述&lt;th&gt;扩展名&lt;th&gt;附注")
+        for (var i = 0; i &lt; count; i++) {
+          write("&lt;tr&gt;&lt;td&gt;"+i+"&lt;td&gt;"+
+          navigator.mimeTypes[i].type+
+          "&lt;td&gt;"+navigator.mimeTypes[i].description+"&lt;td&gt;"+
+          navigator.mimeTypes[i].suffixes+"&lt;td&gt;"+
+          navigator.mimeTypes[i].enabledPlugin.name);
+        }
+      }
+</code></pre>
+  </div>
+  <ul>
+    <li>navigator.javaEnabled() 可检查浏览器是否已启用Java支持功能。
+      <h2 id="文档对象">文档对象</h2>
+    </li>
+    <li>设置链接：document.location=””;
+ 查看文档最后修改时间：document.lastModfied;
+ 设置标签value值：document.表单名(form[i]).element[j].value
+ 按照标签ID引用标签：document.getElementByID();
+ 设置已访问过的超链接的颜色：document.vlinkColor=””
+ 设置访问中的超链接的颜色：document.alinkColor=””
+ 设置背景颜色：document.bgColor=””
+ 设置字体颜色：document.body.text=””
+ 显示标题：document.title
+ 显示URL：document.URL
+ 设置滚动：setInterval(“函数”,speed)
+ 防止盗链：referrer 属性
+ 锚链接对象：anchors属性（保存锚链接的数组，具有length属性）
+      <div class="language-python highlighter-rouge"><pre class="highlight"><code>  <span class="o">//</span><span class="err">防止盗链</span>
+  <span class="n">var</span> <span class="n">frontURL</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">referrer</span><span class="p">;</span>
+  <span class="n">var</span> <span class="n">host</span> <span class="o">=</span> <span class="n">location</span><span class="o">.</span><span class="n">hostname</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">frontURL</span> <span class="o">!=</span> <span class="s">""</span><span class="p">){</span>
+      <span class="n">var</span> <span class="n">frontHost</span> <span class="o">=</span> <span class="n">frontURL</span><span class="o">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="n">host</span><span class="o">.</span><span class="n">length</span><span class="o">+</span><span class="mi">7</span><span class="p">);</span>
+      <span class="k">if</span><span class="p">(</span><span class="n">host</span> <span class="o">==</span> <span class="n">frontHost</span><span class="p">){</span>
+          <span class="n">alert</span><span class="p">(</span><span class="s">"没有盗链！"</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span><span class="p">{</span>
+          <span class="n">alert</span><span class="p">(</span><span class="s">"您是非法链接，请通过本部访问"</span><span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">else</span><span class="p">{</span>
+       <span class="n">alert</span><span class="p">(</span><span class="s">"您是直接打开该文档的，没有盗链！"</span><span class="p">)</span>   
+      <span class="p">}</span>    
+</code></pre>
+      </div>
+    </li>
+    <li><strong>document.write</strong>和<strong>document.writeln</strong>的区别：
+在js标签之间，必须用document.writeln()在网页中写HTML。</li>
+    <li><strong>all和children</strong>
+document.all[]是文档中所有标签组成的一个数组变量，可通过document.all[i]、document.all[name]、document.all.tags[tagName]三种方式引用文档中的HTML元素。children可获得某一元素的子元素数组。
+      <h2 id="图像对象">图像对象</h2>
+    </li>
+    <li>可通过new Image()的方法新建一个图像对象。</li>
+    <li><strong>属性</strong> 
+src：设置图像链接
+      <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">//</span><span class="err">当鼠标在图片上时，改变图片</span>
+<span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s">"background.jpg"</span> <span class="n">name</span><span class="o">=</span><span class="s">"image"</span> <span class="n">alt</span><span class="o">=</span><span class="s">""</span> <span class="n">onmouseover</span><span class="o">=</span><span class="s">"javascript:document.image.src='blue.jpg'"</span><span class="o">/&gt;</span>
+</code></pre>
+      </div>
+      <p>alt：设置加载图片时显示的信息
+  border：设置图像的边框信息
+  complete：设置图像是否载入的信息
+  height：设置图像高度
+  width：设置图像宽度
+  hspace：设置图像与左右边文字的间距（以像素为单位）
+  vspace：设置图像与上面边文字的间距（以像素为单位）
+  lowsrc：设置图片指向低分辨率版本的链接
+  name：设置图像名称信息</p>
+    </li>
+    <li>onerror事件：当图片无法显示时将图片src设为已存在特定有效图片。
+      <h2 id="历史对象和地址对象">历史对象和地址对象</h2>
+    </li>
+    <li>移至前一页：history.back()
+ 移至后一页：history.forward()
+ 设置相对数字，移动页面：history.go(number,URL)
+ 装入URL中包含字符串的最近一个文档：history.go(“characters”)</li>
+    <li>实现页面跳转可以通过history.go()也可通过window.location.href()，此方法可以实现通过点击按钮等方法跳转页面</li>
+    <li>取得整个URL字符串：location.href
+ 地址的协议：location.protocol
+ 地址的主机名：location.hostname
+ 地址的主机和端口号：location.host
+ 取得路径名：location.pathname
+ 取得整个地址：url</li>
+    <li><strong>assign、replace、reload</strong>
+      <ul>
+        <li>assign方法跳转至新页面可通过返回上一步返回原页面；</li>
+        <li>replace方法使用新的URL替换原URL，即不可通过返回上一步返回原页面；</li>
+        <li>reload方法有一个bool参数，当参数为true时才会跳转页面，该参数默认为false，此时有刷新页面的作用。</li>
+      </ul>
+    </li>
+    <li>刷新页面的方法：
+      <ul>
+        <li>location.reload()</li>
+        <li>location=location</li>
+        <li>location.navigate(location)</li>
+        <li>location.replace(location)</li>
+        <li>history.go(0)</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>

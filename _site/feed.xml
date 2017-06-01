@@ -3,11 +3,611 @@
   <channel>
     <title>葱葱</title>
     <description>星之所向，无惧无忧。</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 31 May 2017 21:56:42 +0800</pubDate>
-    <lastBuildDate>Wed, 31 May 2017 21:56:42 +0800</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 01 Jun 2017 16:23:22 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Jun 2017 16:23:22 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>舞娘</title>
+        <description>﻿—
+layout:     post
+title:      舞娘（flexbox）
+author:     葱葱
+tags: 		CSS 笔记
+category:  project1
+
+
+
+flexbox简介
+Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。省去了使用float的麻烦，可以实现一些诸如垂直居中之类的传统CSS无法实现的样式。目前大多数浏览器都可兼容，少数浏览器（如：IE8，IE9，Android3等少数老版本浏览器）
+常用属性
+
+  
+    display:flex    将该div设置为flexbox的外围盒子
+    flex-wrap 设置是否允许换行，默认为”none”，更改为”wrap”即为允许换行
+    flex-direction 设置内部盒子的排列方式，默认为行排列（row），可更改为列排列（column）
+    justify-content 将所有剩余空间均分给内部盒子，可设置为”flex-start”,”flex-end”,”center”,”space-between”,”space-around”
+    flex 设置内部盒子之间宽度的比例，默认为0
+    flex-basis  设置内部盒子的默认宽度
+    flex-grow 设置内部盒子伸展时伸展长度的比例
+    flex-shrink 设置内部盒子收缩时收缩长度的比例
+    align-items 对其方式：上对齐（flex-start），下对齐（flex-end），垂直居中对齐（center），铺满（strech）。
+      响应式样式
+      在不同设备上查看网页时可根据设备大小更改。
+写语句：
+      @media (max-width:600px){
+  .main{
+      flex-direction:column;
+  }
+  .col-2,.col-3{
+      width:auto;
+  }
+}
+
+      
+      则该代码表示当设备的宽度小于600px(一般手机宽度小于600px)时，采用该段代码的CSS样式。
+      深入学习
+    
+    完整的flexbox相关知识：MDN flexbox
+    参考CSS-tricks的文章
+    学习网址：http://flexbox.io
+  
+
+
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <link>/2017/06/01/%E8%88%9E%E5%A8%98/</link>
+        <guid isPermaLink="true">/2017/06/01/%E8%88%9E%E5%A8%98/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>安装Kekyll</title>
+        <description>安装ruby、rubygems
+1.通过apt-get方法安装（注意：这种方法不能安装最新版本，安装版本为Ruby 1.9.3）
+sudo apt-get install ruby-full
+
+
+
+  官网链接：http://www.ruby-lang.org/en/documentation/installation/
+  使用错误：ERROR:  While executing gem ... (Gem::FilePermissionError)
+  You don't have write permissions for the /usr/local/bin directory.
+
+解决方法：在操作语句前加sudo
+    2.通过rbenv安装（可选择版本）
+    ```python
+cd $HOME
+sudo apt-get update
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+  
+
+
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo ‘export PATH=”$HOME/.rbenv/bin:$PATH”’ » ~/.bashrc
+echo ‘eval “$(rbenv init -)”’ » ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo ‘export PATH=”$HOME/.rbenv/plugins/ruby-build/bin:$PATH”’ » ~/.bashrc
+exec $SHELL
+
+rbenv install 2.3.1
+rbenv global 2.3.1
+ruby -v
+### 3.安装结果：`gem env`
+  - RUBYGEMS VERSION: 2.5.1
+  - RUBY VERSION: 2.3.1 (2016-04-26 patchlevel 112) [x86_64-linux-gnu]
+## 安装jekyll
+```python
+sudo gem install jekyll
+
+
+jekyll官网
+http://jekyll.com.cn/
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <link>/project1/2017/06/01/%E5%AE%89%E8%A3%85Kekyll/</link>
+        <guid isPermaLink="true">/project1/2017/06/01/%E5%AE%89%E8%A3%85Kekyll/</guid>
+        
+        <category>ruby</category>
+        
+        <category>rubygems</category>
+        
+        <category>jekyll</category>
+        
+        
+        <category>project1</category>
+        
+      </item>
+    
+      <item>
+        <title>下载安装curl</title>
+        <description>﻿—
+layout:     post
+title:      如何安装node-gyp
+author:     葱葱
+tags: 		curl nvm npm node-gyp
+category:  project1
+
+
+下载安装curl
+1.下载curl（可在官网直接下载）
+wget http://curl.haxx.se/download/curl-7.37.1.tar.gz
+
+
+2.解压至当前文件夹
+tar -xzvf curl-7.37.1.tar.gz
+
+
+3.编译及安装
+cd curl-7.37.1/
+
+./configure
+
+make
+
+sudo make install
+
+
+
+  对于使用中出现的curl链接错误：将链接中‘https’的‘s’去掉即可
+
+
+##下载安装node-gyp
+1.安装nvm（详细过程可参考：
+https://github.com/creationix/nvm/blob/master/README.markdown#problems）
+
+  问题解决
+  
+    运行nvm ls-remote 结果显示N/A：
+      
+        
+          打开～/.nvm/nvm.sh文件，将其中的镜像语句
+export NVM_NODEJS_ORG_MIRROR=”https://nodejs.org/dist/”
+中的‘https’改为‘http’，运行source ～/.nvm/nvm.sh使文件生效即可。
+        
+      
+    
+  
+
+
+2.安装npm
+nvm install node 
+
+
+
+  可通过nvm ls-remote 查看可安装版本，在nodejs官网上查看选择稳定版
+
+
+3.安装node-gyp
+npm install -g node-gyp
+
+
+安装node-gyp的作用
+安装node-gyp后即可在atom中成功安装插件
+
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <link>/2017/06/01/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85curl/</link>
+        <guid isPermaLink="true">/2017/06/01/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85curl/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Javascript对象篇笔记</title>
+        <description>﻿—
+layout:     post
+title:      javascript对象篇
+author:     葱葱
+tags: 		javascript 笔记
+subtitle:   To learn how to use a jekyll blog model and push it on the github.
+category:  project1
+
+
+面向过程与面向对象
+
+  面向过程是将能完成特定任务的程序段独立起来做成函数，整个系统通过函数相互调用处理数据，系统以数据流为中心。
+  面向对象的语言至少提供以下功能：封装、聚合、继承、多态。对象应具备属性和方法。
+##javascript的对象
+    
+      
+        当要废除一个对象时，可将其指向null
+        javascript是动态语言，对象类型在运行时才能确定，不存在早期绑定。
+        javascript对象模型：语言核心、基本内置语句（String、Date、Math等）、浏览器对象（window、Navigator、Location等）、文档对象（Document、Form、Image等）
+        浏览器对象模型(window)：document、frames、history、location、navigator
+##事件驱动与事件处理
+        常用输入事件：
+1、onload、onunload（卸载某网页）、
+2、onMousemove、onMouseOut、onMouseOver、onMousedown、onMouseup、
+3、onClick、oncontextmenu（鼠标右键单击事件）、ondblclick、
+4、onkeydown、onkeyup、onkeypress、
+5、onfocus、onBlur（对象失去焦点）、onchange、onselect、
+6、onsubmit（提交表单）、onreset（重置）
+        事件后可调用代码
+          &amp;lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;查看密码和姓名&quot; onclick=&quot;javascript:alert('姓名：'+form1.textfield.value+'\n 密码：'+form1.password.value);&quot;/&amp;gt;
+
+          
+        
+      
+    
+  
+
+
+
+  
+    设置对象事件的方法
+          function HandleAllLinks(){
+      for (var i = 0; i &amp;lt; document.links.length; i++) {
+        document.links[i].onclick = HandleAllLink;
+      }
+    }
+    function HandleAllLink(){
+      alert(&quot;即将离开此页！&quot;);
+    }
+
+      
+    
+    显式调用事件处理程序
+```python
+  
+  
+
+&amp;lt;/head&amp;gt;
+
+    
+      
+    
+  
+
+  * 事件处理程序的返回值为false时会阻止浏览器进行下一步操作。
+* **其它常用事件**
+   弹出警告框：alert()
+   弹出询问框：confirm()
+   弹出对话框：prompt()
+   打开新窗口：open(&quot;url&quot;,&quot;name&quot;,&quot;replace&quot;)
+   关闭窗口：close();
+   改变大小：resizeBy(x,y);resizeTo(x,y)
+   自动滚动文档：window.scrollBy(左右,上下);
+   设置定时器（周期性执行代码）：setInterval(&quot;函数&quot;,时间);
+   停止周期性执行代码：clearInterval(timer);
+   延迟代码执行：window.setTimeout(&quot;code&quot;,time);
+   取消延迟执行：clearTimeout(延时器);
+* open 方法可打开非HTML文件，只需在第一个参数加上文件类型即可。
+## 屏幕对象
+*      屏幕实际高度：screen.availHeight
+        屏幕实际宽度：screen.availWidth
+        屏幕色盘深度：screen.colorDepth
+        屏幕区域高度：screen.height
+        屏幕区域宽度：screen.width
+        屏幕分辨率：screen.width*screen.height
+        网页可见区域宽：document.body.clientWidth
+        网页可见区域高：document.body.clientHeight
+        网页可见区域宽（包括边线和滚动条）：document.body.offsetWidth
+        网页可见区域高（包括边线的宽）：document.body.offsetHeight
+        网页正文全文宽：document.body.scrollWidth
+        网页正文全文高：document.body.scrollHeight
+        网页被卷去的高：document.body.scrollTop
+        网页被卷去的左：document.body.scrollLeft
+        网页正文部分上：window.screenTop
+        网页正文部分左：window.screenLeft
+## 浏览器对象（navigator）
+* 浏览器代码：navigator.appCodeName
+   浏览器名称：navigator.appName
+   浏览器版本：navigator.appVersion
+   浏览器语言：navigator.language
+   浏览器编译平台：navigator.platform
+   浏览器用户表头：navigator.userAgent1
+* MimeType对象以数组形式保存浏览器所支持MIME类型信息，Plugin主要管理当前浏览器已安装的插件或外挂程序信息。
+```python
+     //例：列表输出MIME信息
+      var count = navigator.mimeTypes.length;
+      with(document){
+        write(&quot;当前浏览器支持&quot;+count+&quot;种MIME类型：&quot;);
+        write(&quot;&amp;lt;TABLE BORDER&amp;gt;&quot;)
+        write(&quot;&amp;lt;CAPTION&amp;gt;MIME type 清单&amp;lt;/CAPTION&amp;gt;&quot;)
+        write(&quot;&amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;&amp;lt;th&amp;gt;名称&amp;lt;th&amp;gt;描述&amp;lt;th&amp;gt;扩展名&amp;lt;th&amp;gt;附注&quot;)
+        for (var i = 0; i &amp;lt; count; i++) {
+          write(&quot;&amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&quot;+i+&quot;&amp;lt;td&amp;gt;&quot;+
+          navigator.mimeTypes[i].type+
+          &quot;&amp;lt;td&amp;gt;&quot;+navigator.mimeTypes[i].description+&quot;&amp;lt;td&amp;gt;&quot;+
+          navigator.mimeTypes[i].suffixes+&quot;&amp;lt;td&amp;gt;&quot;+
+          navigator.mimeTypes[i].enabledPlugin.name);
+        }
+      }
+
+  
+  
+    navigator.javaEnabled() 可检查浏览器是否已启用Java支持功能。
+      文档对象
+    
+    设置链接：document.location=””;
+ 查看文档最后修改时间：document.lastModfied;
+ 设置标签value值：document.表单名(form[i]).element[j].value
+ 按照标签ID引用标签：document.getElementByID();
+ 设置已访问过的超链接的颜色：document.vlinkColor=””
+ 设置访问中的超链接的颜色：document.alinkColor=””
+ 设置背景颜色：document.bgColor=””
+ 设置字体颜色：document.body.text=””
+ 显示标题：document.title
+ 显示URL：document.URL
+ 设置滚动：setInterval(“函数”,speed)
+ 防止盗链：referrer 属性
+ 锚链接对象：anchors属性（保存锚链接的数组，具有length属性）
+        //防止盗链
+  var frontURL = document.referrer;
+  var host = location.hostname;
+  if(frontURL != &quot;&quot;){
+      var frontHost = frontURL.substring(7,host.length+7);
+      if(host == frontHost){
+          alert(&quot;没有盗链！&quot;);
+      }
+      else{
+          alert(&quot;您是非法链接，请通过本部访问&quot;);
+      }
+  }
+  else{
+       alert(&quot;您是直接打开该文档的，没有盗链！&quot;)   
+      }    
+
+      
+    
+    document.write和document.writeln的区别：
+在js标签之间，必须用document.writeln()在网页中写HTML。
+    all和children
+document.all[]是文档中所有标签组成的一个数组变量，可通过document.all[i]、document.all[name]、document.all.tags[tagName]三种方式引用文档中的HTML元素。children可获得某一元素的子元素数组。
+      图像对象
+    
+    可通过new Image()的方法新建一个图像对象。
+    属性 
+src：设置图像链接
+      //当鼠标在图片上时，改变图片
+&amp;lt;img src=&quot;background.jpg&quot; name=&quot;image&quot; alt=&quot;&quot; onmouseover=&quot;javascript:document.image.src='blue.jpg'&quot;/&amp;gt;
+
+      
+      alt：设置加载图片时显示的信息
+  border：设置图像的边框信息
+  complete：设置图像是否载入的信息
+  height：设置图像高度
+  width：设置图像宽度
+  hspace：设置图像与左右边文字的间距（以像素为单位）
+  vspace：设置图像与上面边文字的间距（以像素为单位）
+  lowsrc：设置图片指向低分辨率版本的链接
+  name：设置图像名称信息
+    
+    onerror事件：当图片无法显示时将图片src设为已存在特定有效图片。
+      历史对象和地址对象
+    
+    移至前一页：history.back()
+ 移至后一页：history.forward()
+ 设置相对数字，移动页面：history.go(number,URL)
+ 装入URL中包含字符串的最近一个文档：history.go(“characters”)
+    实现页面跳转可以通过history.go()也可通过window.location.href()，此方法可以实现通过点击按钮等方法跳转页面
+    取得整个URL字符串：location.href
+ 地址的协议：location.protocol
+ 地址的主机名：location.hostname
+ 地址的主机和端口号：location.host
+ 取得路径名：location.pathname
+ 取得整个地址：url
+    assign、replace、reload
+      
+        assign方法跳转至新页面可通过返回上一步返回原页面；
+        replace方法使用新的URL替换原URL，即不可通过返回上一步返回原页面；
+        reload方法有一个bool参数，当参数为true时才会跳转页面，该参数默认为false，此时有刷新页面的作用。
+      
+    
+    刷新页面的方法：
+      
+        location.reload()
+        location=location
+        location.navigate(location)
+        location.replace(location)
+        history.go(0)
+      
+    
+  
+
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <link>/2017/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%AF%87%E7%AC%94%E8%AE%B0/</link>
+        <guid isPermaLink="true">/2017/06/01/javascript%E5%AF%B9%E8%B1%A1%E7%AF%87%E7%AC%94%E8%AE%B0/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Javascript基础笔记</title>
+        <description>﻿—
+layout:     post
+title:      javascript基础注意点
+author:     葱葱
+tags: 		javascri 笔记
+subtitle:   To learn how to use a jekyll blog model and push it on the github.
+category:  project1
+
+
+
+真假值判定(boolean)
+
+  true:非零值，空对象(empty object)，空数组(empty array)
+  false:数字零，undefined(没有值)，null(没有对象)，NaN，’’
+    查看元素类型
+  
+  typeof:直接显示变量的数据类型
+  instanceof:判断变量是否为通过Constr构造器构造的对象
+    运算符/操作符
+  
+  常规（宽松）的相等：== ，！=
+  严格的相等：=== ， ！==
+  严格是指不但值相等，数据类型也相同；宽松意义的相等只需值相等即可。
+  javscript中没有比较对象的方法(用new构造的对象(类)之间无法进行比较)
+  异或的异或为原始数据（该性质可用于数据的加密解密）
+  左移时空缺处补0，右移时若为带符号数则补为符号位，若无符号则补为0
+  javascript可以运用delete运算符删除对象的某一属性或数组的某一元素
+  “,”运算符的作用为从左到右执行表达式，最后返回最右边的表达式的结果
+  call 运算符：改变函数当前this指针的指向，可更改当前执行上下文
+
+
+//例：showStudentInfo为一种函数方法
+
+      var stu1=new Student(&quot;Tom&quot;,20);
+      var stu2=new Student(&quot;Lily&quot;,21);
+      showStudentInfo.call(stu1); //对stu1调用方法
+      showStudentInfo.call(stu2); //对stu2调用方法
+      }
+
+
+数字
+
+  javascript 中的数字全为float型，可通过math.ceil(向上) math.floor(向下) 对数字进行取整
+  NaN表示not a number
+  强制类型转换为int用parseInt，强制转换为float型用parseFloat
+##函数
+  格式：
+      function 函数名（参数）{
+      [语句组];
+      [return [表达式] ];
+  }
+
+    
+  
+  函数可作为参数直接传递给另外的函数
+  函数的参数通过arguments变量使参数可用，arguments具有长度和值，但是没有数组的方法
+  参数太多会忽略额外的参数（arguments除外），丢失的参数会得到undefined
+  函数的返回值类型包括值类型，引用类型和函数类型。值类型返回的使数据的副本，用于返回非对象数据；引用类型返回的是数据的地址，通常返回复合类型数据；返回函数返回函数指针（外部函数不能调用私有函数）。
+  公有函数指定义在全局作用域的函数，可被所有代码调用的函数；私有函数是指处于局部作用域（嵌套函数的子级函数），外部函数不可调用。
+##变量名及书写
+  javascript区分大小写，大小写不同的变量为不同变量执行不同操作，变量命名以字母和下划线开头
+  多余的空格会被忽略，同一语句可以分多行书写，而字符串若分行则需用+连接
+  用new创建的对象要删除时必须对引用对象的变量赋值为null
+  创建日期对象时要先用new构造一个Date对象，然后可对该对象进行取（设）年/月/日的操作
+        var time=new Date(); //新建一个日期对象
+    var year=time.getYear(); //新建一个变量
+    document.write(year);
+
+    
+    字符串
+  
+  字符串的字符索引从0开始
+  一字符串类型变量与一数字类型变量相加时，数字变量会先被强制转换为字符串类型，然后执行字符串连接操作
+  javascript可直接写入HTML代码，输出时该HTML代码会被执行
+
+
+//例：对数组进行由小到大排列
+
+  var oMyArray=new Array(13,55,37,33,45,9,60,21,10);
+      document.write(&quot;排序前：&quot;+oMyArray);
+      for (index in oMyArray) {
+        for (i in oMyArray) {
+          if (oMyArray[index]&amp;lt;oMyArray[i]) {
+            nTemp=oMyArray[index];
+            oMyArray[index]=oMyArray[i];
+            oMyArray[i]=nTemp;
+            document.write(&quot;&amp;lt;br&amp;gt;排序后：&quot;+oMyArray);
+          }
+        }
+      }
+
+
+
+数组
+
+  对数组进行排序时，操作对象为数组本身，执行交换操作会实时对数组本身进行操作从而更改原数组数据顺序
+  in操作符：检查对象中是否有特定属性，可以取得数组索引集合
+  数组的索引也从0开始
+  push属性可将某值加入数组中
+  删除数组元素：delete
+        var Ary = [1,3,5,7,9,12,16,34]; //新建一个数组变量
+    document.write(Ary);
+    document.write(&quot;&amp;lt;br&amp;gt;&quot;);
+    delete Ary[5]; //删除数组下标为5的元素
+    document.write(Ary);
+
+    
+  
+  采用toString将数组转换成字符串分隔符只能为“，”若想要自定义分隔符则应使用join
+        var Ary = [&quot;lily&quot;,&quot;andy&quot;,&quot;tim&quot;,&quot;max&quot;,&quot;jone&quot;];
+    document.write(Ary);
+    document.write(&quot;&amp;lt;br&amp;gt;&quot;);
+    document.write(Ary.join(&quot;*&quot;)); //用*连接元素
+
+    
+  
+  pop函数和shift函数的返回值分别为数组最后一个元素和数组第一个元素，对原数组执行删除尾元素和删除头元素的操作。
+  unshift可在数组头部添加元素，concat可以连接多个数组。
+  splice可以删除数组从某一位置起的一个或多个元素并可将其替换为其它元素,函数返回被删除的元素。
+      /*删除数组Ary从下标为1的元素起的3个元素，并在删除位置上插入&quot;red&quot;,&quot;yellow&quot;,&quot;green&quot;,&quot;blue&quot; */    
+    Ary3=Ary.splice(1,3,&quot;red&quot;,&quot;yellow&quot;,&quot;green&quot;,&quot;blue&quot;); 
+    document.write(Ary3); //被删除的元素
+    document.write(&quot;&amp;lt;br&amp;gt;&quot;);
+    document.write(Ary); //被替换之后的原数组
+    document.write(&quot;&amp;lt;br&amp;gt;&quot;);
+
+    
+    
+      数组的其它操作
+    
+  
+
+
+
+  
+    颠倒数组顺序：reverse();
+    对数组进行排序：sort(); //默认为ASCLL码升序
+    将对象转换为本地字符串：toLocaleString();
+      异常处理
+    
+    try-catch语句
+```python
+try{
+  tryStatements; //必选项，可能发生错误的语句
+}
+catch(exception){ //exception用于引用错误发生时的对象
+  catchStatements; //可选项，错误处理语句
+}
+  
+
+
+* try-catch-finally语句
+```python
+try{
+    tryStatements; //必选项，可能发生错误的语句
+}
+catch(exception){ //exception用于引用错误发生时的对象
+    handleStatements; //可选项，错误处理语句
+}
+finally{
+    finallyStatements; //可选项，在其他过程执行结束后无条件执行的语句
+}
+
+
+
+  throw语句：多个异常处理结构嵌套时，处于里层的try-catch语句可将异常抛出，父级try-catch语句可以接收子级抛出的异常
+        try {
+      var total = 100;
+      var parts = 0;
+      if (parts == 0) {
+        throw &quot;Error:parts is zero&quot;; //抛出异常信息
+      }
+      alert(&quot;每人&quot; + total/parts + &quot;份&quot;)
+    } catch (e) {
+      alert(e); //输出异常信息
+    }
+
+    
+  
+
+
+</description>
+        <pubDate>Thu, 01 Jun 2017 00:00:00 +0800</pubDate>
+        <link>/2017/06/01/javascript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</link>
+        <guid isPermaLink="true">/2017/06/01/javascript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</guid>
+        
+        
+      </item>
     
       <item>
         <title>如何在深度系统上配置JDK</title>
@@ -68,8 +668,8 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 </description>
         <pubDate>Tue, 23 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/</link>
-        <guid isPermaLink="true">http://localhost:4000/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/</guid>
+        <link>/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/</link>
+        <guid isPermaLink="true">/project1/2017/05/23/%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B7%B1%E5%BA%A6%E7%B3%BB%E7%BB%9F%E4%B8%8A%E9%85%8D%E7%BD%AEJDK/</guid>
         
         <category>JDK1.8.0_121</category>
         
@@ -123,11 +723,11 @@ git commit -m &quot;first post&quot;
 　　$ git push origin gh-pages
 
 
-11.访问http://username.github.com/jekyll_demo/即可。（将username替换为自己的github用户名）。
+11.访问http://username.github.io/jekyll_demo/即可。（将username替换为自己的github用户名）。
 </description>
         <pubDate>Tue, 23 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/</link>
-        <guid isPermaLink="true">http://localhost:4000/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/</guid>
+        <link>/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/</link>
+        <guid isPermaLink="true">/project1/2017/05/23/%E4%B8%8B%E8%BD%BDjekyll%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3github/</guid>
         
         <category>jekyll</category>
         
