@@ -5,10 +5,18 @@ description: "纵有风雨，一同前行"
 header-img: "img/home-bg.jpg"
 ---
 <hr>
+<h3>
+	假装有很多人看的样子，装模作样的写一段介绍。
+</h3>
+<p>
+	我是葱葱，一名西南交通大学信息科学与技术学院大二年级的女大学生。机缘巧合之下跟着我可爱的“儿子”来到了一个隐藏于二教的“神秘组织”，打破了这里的技术宅们原本宁静而安逸的生活，“几经波折”但是仍旧厚颜无耻的赖在这里压低工作室的技术水准。
+	如果一不小心被哪个路人看到了这个页面又对这个地方又一丝丝好奇可以去大佬们做的官网上看看（<a href="http://fin-x.space/">http://fin-x.space/</a>）,证明我们这里还是一个正经的“金融大数据研究院”。如果不幸被当事人看到以下内容，
+	希望我还能坚强而完整的呆在这里搜集八卦吧。
+</p>
 
 {% for member in site.data.members %} {% if member.visible == true %}
 
-	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px !important">
+	<img src="{{ member.img }}" style="margin-top:0px; margin-bottom:5px; margin-right:10px; float:left; width:150px;height:190px !important">
 
 	<h1>{{ member.name }}</h1>
 

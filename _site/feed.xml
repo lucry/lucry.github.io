@@ -5,9 +5,30 @@
     <description>星之所向，无惧无忧。</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Jun 2017 21:49:43 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Jun 2017 21:49:43 +0800</lastBuildDate>
+    <pubDate>Sun, 04 Jun 2017 22:07:50 +0800</pubDate>
+    <lastBuildDate>Sun, 04 Jun 2017 22:07:50 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>开博第一篇</title>
+        <description>啦啦啦啦啦，经过将近一个月的不懈努力，我的博客终于基本部署好了！感觉自己瞬间逼格高了很多哈哈哈，以后我也有一个属于自己的空间，可以想怎么安排就怎么安排了，想想就有点小激动！
+
+这一个月里，虽然大部分时间我都没能安定下来好好的了解整个博客框架的构造，仅剩的一点时间又花了很多在找一个合适的头像上，但是，最后的最后，它还是一点一点的变成了我想要的样子。所以说，有的时候，当我们想做一件事的时候，不要觉得它很难就不敢想不敢做，因为当你坚持下来的时候才发现，那些你原来以为很高端的东西只是因为你还没有鼓起勇气尝试而已，只有试过才知道，原来它也不过如此嘛，即使会在一些小问题上绊石头，但是终究你还是可以做到你想要的。
+
+在今后的生活里，这个博客应该会陪着我学习，记录我的生活吧。或许它在别人的眼中可能并没有那么好，但是我会一点一点的让它变得丰富跟成熟。希望五年后十年后的自己，还是可以看到自己今天的博客，这里记录了我的成长，记录了我生活的苦辣酸甜、所思所想，记录我平凡却又奇妙有趣的经历。
+
+另外，在大学里，还是要多四处转转，多去别人空间评论啊什么的去溜达溜达，说不定哪一天，你就会发现一个鲜为人知的神秘基地，而这里可以让尽情去做那个你原本只敢说说的梦，也在某一天离开的时候可以骄傲的说：“我啊，大学期间可不是只有宿舍这一个家哦。”
+
+
+</description>
+        <pubDate>Sun, 04 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/about/2017/06/04/%E5%BC%80%E5%8D%9A%E7%AC%AC%E4%B8%80%E7%AF%87/</link>
+        <guid isPermaLink="true">http://localhost:4000/about/2017/06/04/%E5%BC%80%E5%8D%9A%E7%AC%AC%E4%B8%80%E7%AF%87/</guid>
+        
+        
+        <category>about</category>
+        
+      </item>
     
       <item>
         <title>舞娘（flexbox）</title>
